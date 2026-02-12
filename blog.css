@@ -10,7 +10,7 @@
   /* fonts */
   --primary-font: "Homizio", sans-serif;
   --secondary-font: "Inder", sans-serif;
-  /* color */
+  
   --primary-color: #0f0f0f;
   --secondary-color: #ffffff;
   --red-color: #ce2017;
@@ -20,6 +20,7 @@
 body {
   background-color: var(--primary-color);
   overflow-x: hidden;
+  
 }
 
 h1 {

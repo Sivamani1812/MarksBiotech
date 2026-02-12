@@ -245,7 +245,7 @@ a {
 
 /* TEXT */
 .text-box h2 {
-  font-size: 2.4rem;
+  font-size: 3.2rem;
   margin-bottom: 20px;
 }
 
@@ -403,7 +403,7 @@ a {
   font-weight: 700;
 }
 
-.learning-text span {
+.learning-text h3 span {
   color: red;
 }
 
