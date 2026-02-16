@@ -98,20 +98,100 @@ gsap.from(".hero-image", {
 // ======================================
 // SCROLL PIN CARDS
 // ======================================
-const cards = gsap.utils.toArray(".card");
+// ======================================
+// INFINITE SMOOTH SLIDER
+// ======================================
 
-gsap.timeline({
-  scrollTrigger: {
-    trigger: ".section-3",
-    start: "top 0px",
-    end: "+=2000",
-    scrub: true,
-    pin: true,
-  },
-})
-  .to(cards[0], { opacity: 1, y: 0, scale: 1, duration: 4 })
-  .to(cards[1], { opacity: 1, y: -20, scale: 1, duration: 4 })
-  .to(cards[2], { opacity: 1, y: -40, scale: 1, duration: 4 });
+window.addEventListener("DOMContentLoaded", function () {
+
+  const container = document.querySelector(".over-stack-container");
+  if (!container) return;
+
+  const slides = container.querySelectorAll(".card");
+  if (slides.length === 0) return;
+
+  const track = document.createElement("div");
+  track.className = "slider-track";
+
+  // Clone first & last
+  const firstClone = slides[0].cloneNode(true);
+  const lastClone = slides[slides.length - 1].cloneNode(true);
+
+  track.appendChild(lastClone);
+  slides.forEach(slide => track.appendChild(slide));
+  track.appendChild(firstClone);
+
+  container.appendChild(track);
+
+  const allSlides = track.querySelectorAll(".card");
+
+  let index = 1;
+  const slideWidth = container.clientWidth;
+
+  window.addEventListener("resize", () => {
+  track.style.transition = "none";
+  track.style.transform = `translateX(-${container.clientWidth * index}px)`;
+});
+
+  track.style.transform = `translateX(-${slideWidth * index}px)`;
+
+  // Arrows
+  const prevBtn = document.createElement("button");
+  prevBtn.innerHTML = "‹";
+  prevBtn.className = "slider-btn prev-btn";
+
+  const nextBtn = document.createElement("button");
+  nextBtn.innerHTML = "›";
+  nextBtn.className = "slider-btn next-btn";
+
+  container.appendChild(prevBtn);
+  container.appendChild(nextBtn);
+
+  function moveToSlide() {
+    track.style.transition = "transform 0.5s cubic-bezier(.77,0,.24,1)";
+    track.style.transform = `translateX(-${slideWidth * index}px)`;
+  }
+
+  function nextSlide() {
+    if (index >= allSlides.length - 1) return;
+    index++;
+    moveToSlide();
+  }
+
+  function prevSlide() {
+    if (index <= 0) return;
+    index--;
+    moveToSlide();
+  }
+
+  track.addEventListener("transitionend", () => {
+    if (allSlides[index] === firstClone) {
+      track.style.transition = "none";
+      index = 1;
+      track.style.transform = `translateX(-${slideWidth * index}px)`;
+    }
+
+    if (allSlides[index] === lastClone) {
+      track.style.transition = "none";
+      index = allSlides.length - 2;
+      track.style.transform = `translateX(-${slideWidth * index}px)`;
+    }
+  });
+
+  nextBtn.addEventListener("click", nextSlide);
+  prevBtn.addEventListener("click", prevSlide);
+
+  // AUTO LOOP
+  let auto = setInterval(nextSlide, 4000);
+
+  container.addEventListener("mouseenter", () => clearInterval(auto));
+  container.addEventListener("mouseleave", () => {
+    auto = setInterval(nextSlide, 4000);
+  });
+
+});
+
+
 
 // ======================================
 // SECTION 1 SCROLL REVEAL
