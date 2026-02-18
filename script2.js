@@ -182,11 +182,11 @@ window.addEventListener("DOMContentLoaded", function () {
   prevBtn.addEventListener("click", prevSlide);
 
   // AUTO LOOP
-  let auto = setInterval(nextSlide, 4000);
+  let auto = setInterval(nextSlide, 2000);
 
   container.addEventListener("mouseenter", () => clearInterval(auto));
   container.addEventListener("mouseleave", () => {
-    auto = setInterval(nextSlide, 4000);
+    auto = setInterval(nextSlide, 2000);
   });
 
 });
