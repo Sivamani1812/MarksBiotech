@@ -126,7 +126,8 @@ input[type="radio"]{
 #all:checked ~ .tabs label[for="all"],
 #italia:checked ~ .tabs label[for="italia"],
 #course:checked ~ .tabs label[for="course"],
-#seminar:checked ~ .tabs label[for="seminar"]{
+#seminar:checked ~ .tabs label[for="seminar"],
+#upcoming:checked ~ .tabs label[for="upcoming"]{
   background:#ac1919;
   color:#fff;
 }
@@ -137,8 +138,8 @@ input[type="radio"]{
   margin:auto;
   padding:20px;
   display:grid;
-  grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
-  gap:25px;
+  grid-template-columns:repeat(auto-fit,minmax(320px,1fr));
+  gap:24px;
 }
 
 /* Card */
@@ -147,12 +148,12 @@ input[type="radio"]{
   border-radius:15px;
   overflow:hidden;
   box-shadow:0 6px 15px rgba(0,0,0,.1);
-  max-width: 400px;
+  max-width: 420px;
 }
 
 .event-card img{
   width:100%;
-  height:200px;
+  height:240px;
   object-fit:cover;
 }
 
@@ -204,7 +205,8 @@ input[type="radio"]{
 /* Default hide */
 #italia:checked ~ .events-grid .event-card,
 #course:checked ~ .events-grid .event-card,
-#seminar:checked ~ .events-grid .event-card{
+#seminar:checked ~ .events-grid .event-card,
+#upcoming:checked ~ .events-grid .event-card{
   display:none;
 }
 
@@ -225,7 +227,9 @@ input[type="radio"]{
 #seminar:checked ~ .events-grid .seminar{
   display:block;
 }
-
+#upcoming:checked ~ .events-grid .upcoming{
+  display:block;
+}
 
 
 
