@@ -124,9 +124,7 @@ input[type="radio"]{
 
 /* Active Tab */
 #all:checked ~ .tabs label[for="all"],
-#italia:checked ~ .tabs label[for="italia"],
-#course:checked ~ .tabs label[for="course"],
-#seminar:checked ~ .tabs label[for="seminar"],
+#conference:checked ~ .tabs label[for="conference"],
 #workshop:checked ~ .tabs label[for="workshop"],
 #upcoming:checked ~ .tabs label[for="upcoming"]{
   background:#ac1919;
@@ -204,9 +202,7 @@ input[type="radio"]{
 /* ---------------- FILTER LOGIC ---------------- */
 
 /* Default hide */
-#italia:checked ~ .events-grid .event-card,
-#course:checked ~ .events-grid .event-card,
-#seminar:checked ~ .events-grid .event-card,
+#conference:checked ~ .events-grid .event-card,
 #workshop:checked ~ .events-grid .event-card,
 #upcoming:checked ~ .events-grid .event-card{
   display:none;
@@ -217,16 +213,7 @@ input[type="radio"]{
   display:block;
 }
 
-/* Show Category */
-#italia:checked ~ .events-grid .italia{
-  display:block;
-}
-
-#course:checked ~ .events-grid .course{
-  display:block;
-}
-
-#seminar:checked ~ .events-grid .seminar{
+#conference:checked ~ .events-grid .conference{
   display:block;
 }
 
@@ -787,4 +774,51 @@ input[type="radio"]{
     margin: auto;
     display: block;
   }
+}
+
+.event-list {
+  margin: 20px 0;
+  padding-left: 20px;
+  color: #ccc;
+}
+
+.event-list li {
+  margin-bottom: 8px;
+}
+
+.hero-quote {
+  margin-top: 15px;
+  font-style: italic;
+  opacity: 0.8;
+}
+
+.speaker-profile {
+  text-align: center;
+  margin-top: 30px;
+}
+
+.speaker-profile img {
+  width: 220px;
+  border-radius: 50%;
+  margin-bottom: 15px;
+}
+
+.speaker-info h2 {
+  margin-bottom: 5px;
+}
+
+.speaker-highlight-img img {
+  width: 100%;
+  border-radius: 12px;
+  margin-top: 30px;
+}
+
+.event-list {
+  margin: 15px 0;
+  padding-left: 20px;
+}
+
+.event-list li {
+  margin-bottom: 8px;
+  line-height: 1.6;
 }
