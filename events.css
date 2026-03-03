@@ -674,14 +674,14 @@ input[type="radio"]{
 
 .event-about p {
   color: #bbb;
-  line-height: 1.8;
+  line-height: 1.5;
   max-width: 800px;
 }
 
 /* ===== SHOWCASE ===== */
 
 .event-showcase {
-  padding: 70px 0 100px;
+  padding: 20px 0 50px;
   border-top: 1px solid #222;
 }
 
@@ -753,7 +753,7 @@ input[type="radio"]{
   display: grid;
   grid-template-columns: 1.1fr 0.9fr;
   align-items: center;
-  gap: 60px;
+  gap: 30px;
 }
 
 /* RIGHT IMAGE */
