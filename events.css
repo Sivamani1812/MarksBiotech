@@ -30,9 +30,14 @@ h1 {
 }
 h2 {
   font-size: 3.2rem;
+  font-family: var(--primary-font);
+}
+h3{
+  font-family: var(--secondary-font);
 }
 h4{
     font-size: 2rem;
+    font-family: var(--primary-font);
 }
 h5{
     font-size: 1.7rem;
@@ -48,6 +53,7 @@ p {
 }
 ul li {
   list-style: none;
+  font-family: var(--secondary-font);
 }
 a {
   text-decoration: none;
@@ -593,7 +599,6 @@ input[type="radio"]{
 
 .event-section {
   background: #000;
-  font-family: 'Poppins', sans-serif;
   color: #fff;
 }
 

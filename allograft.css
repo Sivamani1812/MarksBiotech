@@ -1,19 +1,57 @@
-* {
-  padding: 0;
-  margin: 0;
-  box-sizing: border-box;
-  scroll-behavior: smooth;
-}
-body {
-  background: radial-gradient(circle at top, #333, #000);
-  color: #fff;
+@import url("https://fonts.googleapis.com/css2?family=Figtree:ital,wght@0,300..900;1,300..900&family=Inder&family=Instrument+Serif:ital@0;1&display=swap");
+@import url("https://fonts.cdnfonts.com/css/homizio");
 
+* {
+  margin: 0;
   padding: 0;
+  box-sizing: border-box;
+}
+:root {
+  /* fonts */
+  --primary-font: "Homizio", sans-serif;
+  --secondary-font: "Inder", sans-serif;
+  /* color */
+  --primary-color: #0f0f0f;
+  --secondary-color: #ffffff;
+  --red-color: #ce2017;
+  --gray-color: #b2b2b2;
+}
+
+body {
+  background-color: var(--primary-color);
+  overflow-x: hidden;
+}
+
+h1 {
+  font-family: var(--primary-font);
+  font-size: 5rem;
+  color: var(--secondary-color);
+  font-weight: 700;
+}
+h2 {
+  font-size: 3.2rem;
+}
+
+p {
+  font-family: var(--secondary-font);
+  color: white;
+}
+.container {
+  width: 90%;
+  margin: auto;
+}
+ul li {
+  list-style: none;
+  color: white;
+  font-family: var(--secondary-font)
 }
 a {
   text-decoration: none;
+  text-transform: capitalize;
+  font-family: var(--secondary-font);
+  font-size: 18px;
+  font-weight: 700;
 }
-
 
 /* HERO */
 
@@ -263,14 +301,15 @@ a {
 .instructions h3 {
   color: red;
   margin-bottom: 20px;
-  font-size: 30px;
+  font-size: 35px;
   padding-bottom: 20px;
+  font-family: var(--secondary-font);
 }
 
 .instructions ul {
   padding-left: 20px;
-  font-size: 25px;
-  line-height: 2.1;
+  font-size: 22px;
+  line-height: 1.6;
 }
 
 /* =========================
