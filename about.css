@@ -222,7 +222,7 @@ a {
   max-width: 1400px;
   margin: auto;
   padding: 20px 20px;
-  background-color: #0f0e0e;
+  background-color: #000000;
 }
 
 .partners-top {
@@ -473,7 +473,16 @@ a {
   max-width: 1400px;
   margin: auto;
   padding: 40px 20px;
-  background-color: #131313;
+  background-color: #050505;
+}
+
+.device-section1 {
+  background-color: #000000;
+  padding: 40px 20px;
+}
+
+.device-section1 .market-section {
+  margin-top: 0;
 }
 
 /* TOP BOX */
@@ -1192,5 +1201,58 @@ a {
 
   .founder-text li {
     margin-bottom: 6px;
+  }
+}
+
+/* Market Text1 Distribution Block */
+.market-text1 {
+  margin: 42px auto 0;
+  max-width: 1200px;
+  padding: 0 60px;
+}
+
+.market-distribution-image {
+  width: min(100%, 980px);
+  display: block;
+  margin: 0 auto 28px;
+  border-radius: 12px;
+  box-shadow: 0 10px 26px rgba(0, 0, 0, 0.24);
+}
+
+.market-text1 h4 {
+  max-width: 980px;
+  margin: 0 auto 18px;
+  text-align: left;
+}
+
+.market-text1 ul {
+  max-width: 980px;
+  margin: 0 auto;
+  padding-left: 28px;
+}
+
+@media (max-width: 1024px) {
+  .market-text1 {
+    padding: 0 20px;
+  }
+}
+
+@media (max-width: 600px) {
+  .market-text1 {
+    margin-top: 28px;
+    padding: 0 14px;
+  }
+
+  .market-distribution-image {
+    margin-bottom: 18px;
+  }
+
+  .market-text1 h4 {
+    font-size: 22px;
+    text-align: left;
+  }
+
+  .market-text1 ul {
+    padding-left: 18px;
   }
 }
